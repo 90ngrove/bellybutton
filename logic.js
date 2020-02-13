@@ -7,11 +7,7 @@ function buildMyCharts(sample) {
     var labels = myResults.otu_labels;
     var values = myResults.sample_values;
     var Layout = {
-      title: "Bacteria Cultures",
-      margin: { t: 0 },
-      hovermode: "closest",
-      xaxis: { title: "OTU ID" },
-      margin: { t: 30}
+      title: "Bacteria Cultures"
     };
     var bubbleTrace = [
       {
