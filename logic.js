@@ -23,12 +23,16 @@ function buildMyCharts(sample) {
     ];
 
     Plotly.newPlot("bubble", bubbleTrace, Layout);
-
-    var xticks = ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
+    
+    
+    var OTU_top = (ids.slice(0, 10)).reverse();
+        
+        // get the otu id's to the desired form for the plot
+    var OTU_id = OTU_top.map(d => "OTU " + d)
     var barTrace = [
       {
         y: values.slice(0, 10),
-        x: xticks,
+        x: OTU_id,
         text: labels.slice(0, 10),
         type: "bar"
       }
